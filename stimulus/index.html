@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of a Stimulus Controller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/ico">
+</head>
+<body>
+    <main>
+        <h1>Stimulus Controller Demo</h1>
+        <p>This page demonstrates a simple <a href="https://stimulus.hotwire.dev/">Stimulus Controller</a>.</p> 
+        <p>It enhances an input field with buttons to either Copy the current content of the field to
+        the Clipboard or paste the Clipboards contents to the input field.</p>
+
+        <h2>All included</h2>
+        <section class="demo">
+            <div data-controller="enhanced-input" 
+                 data-enhanced-input-hidden-class="hidden" 
+                 data-enhanced-input-copy-value="true"
+                 data-enhanced-input-paste-value="true">
+                <input data-enhanced-input-target="input">
+                <button class="hidden" data-enhanced-input-target="copy"  data-action="click->enhanced-input#copy">Copy</button>
+                <button class="hidden" data-enhanced-input-target="paste" data-action="click->enhanced-input#paste">Paste</button>
+            </div>
+        </section>
+
+        <h2>Copy switched off</h2>
+        <section class="demo">
+            <div data-controller="enhanced-input" data-enhanced-input-hidden-class="hidden"
+                data-enhanced-input-copy-value="false" data-enhanced-input-paste-value="true">
+                <input data-enhanced-input-target="input">
+                <button class="hidden" data-enhanced-input-target="copy" data-action="click->enhanced-input#copy">Copy</button>
+                <button class="hidden" data-enhanced-input-target="paste"
+                    data-action="click->enhanced-input#paste">Paste</button>
+            </div>
+        </section>
+
+        <h2>Paste switched off</h2>
+        <section class="demo">
+            <div data-controller="enhanced-input" data-enhanced-input-hidden-class="hidden"
+                data-enhanced-input-copy-value="true" data-enhanced-input-paste-value="false">
+                <input data-enhanced-input-target="input">
+                <button class="hidden" data-enhanced-input-target="copy" data-action="click->enhanced-input#copy">Copy</button>
+                <button class="hidden" data-enhanced-input-target="paste"
+                    data-action="click->enhanced-input#paste">Paste</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
