@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of a Catalyst Controller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/ico">
+</head>
+<body>
+    <main>
+        <h1>Catalyst Controller Demo</h1>
+        <p>This page demonstrates a simple <a href="https://github.github.io/catalyst/">Catalyst Controller</a>.</p> 
+        <p>It enhances an input field with buttons to either Copy the current content of the field to
+        the Clipboard or paste the Clipboards contents to the input field.</p>
+
+        <h2>All included</h2>
+        <section class="demo">
+            <enhanced-input>
+                <input data-target="enhanced-input.input">
+                <button class="hidden" data-target="enhanced-input.copyButton"  data-action="click:enhanced-input#copy">Copy</button>
+                <button class="hidden" data-target="enhanced-input.pasteButton" data-action="click:enhanced-input#paste">Paste</button>
+            </enhanced-input>
+        </section>
+
+        <h2>Copy switched off</h2>
+        <section class="demo">
+            <enhanced-input data-name="foo" data-copy-enabled="false">
+                <input data-target="enhanced-input.input">
+                <button class="hidden" data-target="enhanced-input.copyButton"
+                    data-action="click:enhanced-input#copy">Copy</button>
+                <button class="hidden" data-target="enhanced-input.pasteButton"
+                    data-action="click:enhanced-input#paste">Paste</button>
+            </enhanced-input>
+        </section>
+
+        <h2>Paste switched off</h2>
+        <section class="demo">
+            <enhanced-input data-paste-enabled="false">
+                <input data-target="enhanced-input.input">
+                <button class="hidden" data-target="enhanced-input.copyButton"
+                    data-action="click:enhanced-input#copy">Copy</button>
+                <button class="hidden" data-target="enhanced-input.pasteButton"
+                    data-action="click:enhanced-input#paste">Paste</button>
+            </enhanced-input>
+        </section>
+
+    </main>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
