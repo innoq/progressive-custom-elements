@@ -6,6 +6,7 @@ export default class EnhancedInputController extends Controller {
     static classes = ["hidden"];
     
     connect() {
+        console.log('EnhancedInputController connected');
         if (navigator.clipboard) {
             // this.element.classList.add("clipboard--supported");
             // Copying is supported and turned on
