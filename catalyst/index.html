@@ -16,7 +16,7 @@
 
         <h2>All included</h2>
         <section class="demo">
-            <enhanced-input>
+            <enhanced-input data-copy-enabled data-paste-enabled>
                 <input data-target="enhanced-input.input">
                 <button class="hidden" data-target="enhanced-input.copyButton"  data-action="click:enhanced-input#copy">Copy</button>
                 <button class="hidden" data-target="enhanced-input.pasteButton" data-action="click:enhanced-input#paste">Paste</button>
@@ -25,7 +25,7 @@
 
         <h2>Copy switched off</h2>
         <section class="demo">
-            <enhanced-input data-name="foo" data-copy-enabled="false">
+            <enhanced-input data-paste-enabled>
                 <input data-target="enhanced-input.input">
                 <button class="hidden" data-target="enhanced-input.copyButton"
                     data-action="click:enhanced-input#copy">Copy</button>
@@ -36,7 +36,7 @@
 
         <h2>Paste switched off</h2>
         <section class="demo">
-            <enhanced-input data-paste-enabled="false">
+            <enhanced-input data-copy-enabled>
                 <input data-target="enhanced-input.input">
                 <button class="hidden" data-target="enhanced-input.copyButton"
                     data-action="click:enhanced-input#copy">Copy</button>

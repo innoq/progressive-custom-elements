@@ -5,22 +5,19 @@ export class EnhancedInputElement extends HTMLElement {
     @target copyButton: HTMLButtonElement;
     @target pasteButton: HTMLButtonElement;
     @target input: HTMLInputElement;
-    @attr copyEnabled = "true";
-    @attr pasteEnabled = "true";
-    @attr name = "World";
+    @attr copyEnabled = false;
+    @attr pasteEnabled = false;
 
     connectedCallback() {
-        console.log('EnhancedInputController connected');
-        console.log(`Hello ${this.name}. ${this.pasteEnabled}, ${this.copyEnabled}`);
+        console.log('EnhancedInputElement connected');
         if (navigator.clipboard) {
-            // this.element.classList.add("clipboard--supported");
             // Copying is supported and turned on
-            if (navigator.clipboard.writeText && this.copyEnabled === 'true') {
+            if (navigator.clipboard.writeText && this.copyEnabled === true) {
                 this.copyButton.classList.toggle('hidden');
             }
 
             // Pasting is supported
-            if (navigator.clipboard.readText && this.pasteEnabled === 'true') {
+            if (navigator.clipboard.readText && this.pasteEnabled === true) {
                 this.pasteButton.classList.toggle('hidden');
             }
         }
